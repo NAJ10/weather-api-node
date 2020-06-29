@@ -18,6 +18,3 @@ export interface Issue {
 export function insertIssue(issue: Issue) : Promise<pg.QueryResultRow> {
     return pool.query('INSERT INTO issue (name, email, description) VALUES ($1, $2, $3)', [issue.name, issue.email, issue.description])
 }
-
-
-

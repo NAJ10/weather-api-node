@@ -3,7 +3,7 @@ import {weather} from "./openweather"
 
 export const forecastRouter = Router();
 
-forecastRouter.get('/weather/:city', async (req, res) => {
+forecastRouter.get('/api/weather/:city', async (req, res) => {
     try {
         if (req.params && req.params.city && typeof req.params.city === "string") {
             const city = req.params.city

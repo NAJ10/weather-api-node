@@ -1,0 +1,20 @@
+#!/bin/bash
+if [ -z "$WEATHER_API_KEY" ]
+then
+  echo Set the WEATHER_API_KEY environment variable then run runserver again
+  exit 1
+fi
+
+if [ -z "$DATABASE_USERNAME" ]
+then
+  echo Set the DATABASE_USERNAME environment variable then run runserver again
+  exit 1
+fi
+
+if [ -z "$DATABASE_PASSWORD" ]
+then
+  echo Set the DATABASE_PASSWORD environment variable then run runserver again
+  exit 1
+fi
+
+npm run start:dev
